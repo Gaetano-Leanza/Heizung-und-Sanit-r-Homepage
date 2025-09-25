@@ -12,14 +12,26 @@ body {
 
 header {
   background: white;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  height: 250px;
+}
+
+header .design-element {
+  position: absolute;
+  top: 0;
+  width: 1440px;
+  height: 30px;
+  background: #51baeb;
 }
 
 header .logo {
-  max-height: 80px;
+  max-height: 120px;
   height: auto;
   width: auto;
+  z-index: 1;
 }
 
 main {
@@ -34,8 +46,42 @@ main {
 footer {
   background: #51baeb;
   color: white;
-  padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.left-foot {
+  width: 33%;
+  padding-left: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.right-foot {
+  width: 33%;
+  padding-right: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .social-icons {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+footer .social-icons img:hover {
+  transform: scale(1.2);
 }
 
 h1 {
