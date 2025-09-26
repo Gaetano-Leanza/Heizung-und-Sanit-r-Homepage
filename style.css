@@ -115,12 +115,10 @@ main {
   padding-top: 50px;
   display: flex;
   flex-direction: row;
-  text-align: center;
 }
 
 .left-side {
   display: flex;
-  align-items: center;
   flex-direction: column;
   padding-left: 30px;
   padding-right: 40px;
@@ -129,7 +127,7 @@ main {
 
 .right-side {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   padding-left: 30px;
   padding-right: 30px;
   width: 30%;
@@ -141,33 +139,40 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 90px !important;
 }
 
 .left-foot {
   width: 33%;
-  padding-left: 50px;
+  height: 90px !important;
   display: flex;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  padding-right: 100px;
 }
 
 .right-foot {
   width: 33%;
-  padding-right: 50px;
+  height: 90px !important;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 100px;
 }
 
 footer .social-icons {
   width: 33%;
+  height: 90px !important;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
 footer .social-icons img {
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   transition: transform 0.2s ease;
   cursor: pointer;
 }
@@ -177,7 +182,7 @@ footer .social-icons img:hover {
 }
 
 h1 {
-  color: gray;
+  color: black;
   font-family: "Roboto", Sans-serif;
   font-size: 36px;
   font-weight: 700;
@@ -186,6 +191,7 @@ h1 {
 
 h2 {
   font-size: 38px;
+  color: #51baeb;
 }
 
 h1,
@@ -211,8 +217,42 @@ p {
 }
 
 .calendly-inline-widget {
-  margin: 0 auto; /* zentriert in der Seite */
-  max-width: 1000px; /* nicht breiter als 1000px */
-  border-radius: 10px; /* optional: abgerundete Ecken */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* leichter Schatten */
+  width: 100%;
+  max-width: 1000px; /* maximale Breite */
+  height: 700px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  background: none; /* kein Hintergrund */
+}
+.calendly-container {
+  display: flex; /* bleibt wichtig für die Ausrichtung */
+  justify-content: center;
+  gap: 0; /* kein Abstand sichtbar */
+  flex-wrap: wrap;
+  width: 100%; /* nimmt volle Seitenbreite, nicht 1600px */
+  background: none; /* kein Hintergrund */
+  border: none; /* kein Rahmen */
+  padding: 0; /* kein Innenabstand */
+  margin: 0 auto; /* bleibt mittig */
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 20px 40px; /* Dick und groß */
+  margin-top: 50px;
+  background-color: red; /* Blaue Farbe */
+  color: white; /* Textfarbe */
+  font-size: 20px; /* Große Schrift */
+  font-weight: bold;
+  border: none; /* Kein Rahmen */
+  border-radius: 12px; /* Abgerundete Ecken */
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #0056b3; /* Dunkleres Blau beim Hover */
 }
