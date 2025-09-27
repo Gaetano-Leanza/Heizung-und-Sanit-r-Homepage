@@ -1,26 +1,30 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-}
-
+/* ===========================
+   Grundlayout
+=========================== */
 html,
 body {
   width: 100%;
   height: 100%;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   background-color: white;
   font-family: "zabars", Arial, Helvetica, sans-serif;
 }
 
+/* sorgt dafür, dass Main den restlichen Platz einnimmt */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Inhalt oben beginnen */
+}
+
+/* ===========================
+   Header
+=========================== */
 header {
   background: white;
   display: flex;
@@ -63,7 +67,8 @@ header .container-row {
   z-index: 2;
 }
 
-header .container-row .box {
+header .container-row .box,
+header .container-row .box2 {
   width: 190px;
   height: 102px;
   background: #51b9ea;
@@ -74,52 +79,89 @@ header .container-row .box {
 }
 
 header .container-row .box2 {
-  width: 190px;
-  height: 102px;
-  background: #51b9ea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
   border-left: 0.3px solid #a5a4a4;
   border-top: none;
   border-bottom: none;
 }
 
+/* ===========================
+   Hero / Bildbereich
+=========================== */
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 290px;
+  background: #f3f3f3;
+}
+
+.picture .title-picture {
+  width: 98%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================
+   Hauptinhalte
+=========================== */
+.main-content {
+  width: 1200px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 40px;
+  width: 70%;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 30%;
+}
+
+/* ===========================
+   Footer
+=========================== */
 footer {
   background: #51b9ea;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90px !important;
+  height: 90px;
+}
+
+.left-foot,
+.right-foot,
+footer .social-icons {
+  width: 33%;
+  height: 90px;
+  display: flex;
+  align-items: center;
 }
 
 .left-foot {
-  width: 33%;
-  height: 90px !important;
-  display: flex;
-  align-items: center;
   justify-content: flex-end;
   gap: 20px;
   padding-right: 100px;
 }
 
 .right-foot {
-  width: 33%;
-  height: 90px !important;
-  display: flex;
-  align-items: center;
   justify-content: flex-start;
   padding-left: 100px;
 }
 
 footer .social-icons {
-  width: 33%;
-  height: 90px !important;
-  display: flex;
   justify-content: center;
-  align-items: center;
   gap: 20px;
 }
 
@@ -133,6 +175,20 @@ footer .social-icons img {
 
 footer .social-icons img:hover {
   transform: scale(1.2);
+}
+
+/* ===========================
+   Typografie
+=========================== */
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -163,6 +219,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
+p,
+li {
+  font-size: 19px;
+}
+
 a {
   color: #51b9ea;
   text-decoration: none;
@@ -174,10 +235,23 @@ a:hover {
   color: #3498db;
 }
 
-p, li {
-  font-size: 19px;
+.left-foot a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.left-foot a:hover {
+  transform: translateY(-1px) scale(1.01);
+}
+
+/* ===========================
+   Buttons & Specials
+=========================== */
 .blue {
   color: #51b9ea;
   font-weight: 550;
@@ -185,28 +259,6 @@ p, li {
 
 .gray {
   color: gray;
-}
-
-.calendly-inline-widget {
-  width: 100%;
-  max-width: 1000px;
-  height: 700px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  background: none;
-}
-
-.calendly-container {
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
-  width: 100%;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0 auto;
 }
 
 .contact-button {
@@ -230,6 +282,7 @@ p, li {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Menü-Boxen Hover-Effekt */
 .box,
 .box2 {
   position: relative;
@@ -260,6 +313,16 @@ p, li {
   opacity: 1;
 }
 
+/* ===========================
+   Icons
+=========================== */
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
 .icon-container svg {
   width: 20px;
   height: 20px;
@@ -274,25 +337,4 @@ p, li {
 .icon-container svg[stroke="currentColor"] path,
 .icon-container svg[stroke="currentColor"] circle {
   stroke: currentColor;
-}
-
-.icon-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.left-foot a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  font-size: 20px;
-  padding-top: 10px;
-  cursor: pointer;
-}
-
-.left-foot a:hover {
-  transform: translateY(-1px) scale(1.01);
 }
