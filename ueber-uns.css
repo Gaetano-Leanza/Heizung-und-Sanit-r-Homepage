@@ -353,8 +353,6 @@ a:hover {
   position: relative;
   padding: 10px 46px;
   background: rgba(255, 255, 255, 0.02);
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(3, 6, 12, 0.6);
   gap: 20px;
   max-width: 1300px;
 }
@@ -398,7 +396,7 @@ a:hover {
 
 .card {
   flex: 0 0 auto;
-  width: 300px;
+  width: 350px;
   height: auto;
   border-radius: 10px;
   display: flex;
@@ -406,17 +404,56 @@ a:hover {
   justify-content: center;
   overflow: hidden;
   background: white;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.card1 {
+  flex: 0 0 auto;
+  width: 370px;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: white;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.card2 {
+  flex: 0 0 auto;
+  width: 320px;
+  height: auto;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: white;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .card img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Bild bleibt komplett sichtbar */
+  object-fit: contain;
 }
 
-/* Buttons */
+.card1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .btn-arrow {
   --size: 36px;
   position: absolute;
@@ -448,7 +485,6 @@ a:hover {
   right: 10px;
 }
 
-/* Icon */
 .arrow {
   width: 14px;
   height: 14px;
