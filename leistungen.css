@@ -108,8 +108,75 @@ header .container-row .box2 {
 .main-content {
   width: 1200px;
   padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-content-left {
+  width: 600px;
+  padding-top: 20px;
+  padding-right: 50px;
   display: flex;
   flex-direction: column;
+}
+
+.main-content-right {
+  width: 600px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content2 {
+  width: 100%;
+  min-height: 600px;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content2-text {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content2-wrapper {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content2-left {
+  width: 400px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+.main-content2-right {
+  width: 800px;
+  padding-right: 50px;
+}
+
+.main-content3 {
+  width: 100%;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content3-wrapper {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .left-side {
@@ -126,6 +193,11 @@ header .container-row .box2 {
   padding-left: 30px;
   padding-right: 30px;
   width: 30%;
+}
+
+.picture2 {
+  width: 150px;
+  height: auto;
 }
 
 /* ===========================
@@ -209,6 +281,17 @@ h3 {
   color: black;
 }
 
+h4 {
+  font-size: 28px;
+  color: black;
+}
+
+h5 {
+  font-size: 30px;
+  color: black;
+  padding-top: 10px;
+}
+
 h1,
 h2,
 h3,
@@ -273,7 +356,7 @@ a:hover {
   text-align: center;
   text-decoration: none;
   height: 60px;
-  width: 220px;
+  width: 280px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
