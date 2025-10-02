@@ -93,7 +93,7 @@ header .container-row .box2 {
   align-items: center;
   width: 100%;
   height: 290px;
-  background: #f3f3f3;
+  background-color: #f3f3f3;
 }
 
 .picture .title-picture {
@@ -106,10 +106,12 @@ header .container-row .box2 {
    Hauptinhalte
 =========================== */
 .main-content {
-  width: 1200px;
+  width: 800px;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  padding-bottom: 30px;
 }
 
 .left-side {
@@ -126,6 +128,233 @@ header .container-row .box2 {
   padding-left: 30px;
   padding-right: 30px;
   width: 30%;
+}
+
+.picture-content {
+  width: 100%;
+  min-height: 600px;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.row {
+  position: relative;
+  padding: 10px 66px;
+  background: rgba(255, 255, 255, 0.02);
+  max-width: 1300px;
+  width: 100%;
+}
+
+.row-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.row-header h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.row-header .count {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.track {
+  display: flex;
+  gap: 33.5px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  max-height: 500px;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.card,
+.card1,
+.card2 {
+  flex: 0 0 auto;
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover,
+.card1:hover,
+.card2:hover {
+  transform: scale(1.02);
+}
+
+.card,
+.card1,
+.card2 {
+  width: 371px; /* feste Breite für alle Karten (anpassen nach Bedarf) */
+  height: 371px; /* feste Höhe für alle Karten */
+  overflow: hidden; /* überstehender Teil vom Bild wird abgeschnitten */
+  border-radius: 8px; /* optional, für abgerundete Ecken */
+  display: flex; /* damit Bild mittig bleibt */
+  align-items: center;
+  justify-content: center;
+}
+
+.card img,
+.card1 img,
+.card2 img {
+  height: 730px; /* gleiche Höhe */
+  width: auto; /* Breite passt sich automatisch an */
+  object-fit: cover; /* Bild wird so zugeschnitten, dass es den Container füllt */
+}
+
+.certificate-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #51baeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.certificate-modal img {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  background: white;
+  padding: 20px;
+  cursor: default;
+  animation: modalZoom 0.3s ease;
+}
+
+.modal-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: #333;
+  font-weight: bold;
+}
+
+.modal-nav-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.modal-prev {
+  left: 40px;
+}
+
+.modal-next {
+  right: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .modal-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .modal-prev {
+    left: 10px;
+  }
+
+  .modal-next {
+    right: 10px;
+  }
+}
+
+@keyframes modalZoom {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.btn-arrow {
+  --size: 36px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 999px;
+  border: none;
+  background: #51baeb;
+  color: #e6eef6;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+  transition: transform 0.12s ease, background 0.12s;
+}
+.btn-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+.btn-arrow[disabled] {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.btn-left {
+  left: 10px;
+}
+.btn-right {
+  right: 10px;
+}
+
+.arrow {
+  width: 14px;
+  height: 14px;
+  display: block;
+  transform: translateX(0);
 }
 
 /* ===========================
