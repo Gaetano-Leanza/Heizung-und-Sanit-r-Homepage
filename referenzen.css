@@ -197,12 +197,11 @@ header .container-row .box2 {
 .row-bottom {
   position: relative;
   padding: 10px 66px;
-  padding-bottom:50px;
+  padding-bottom: 50px;
   background: rgba(255, 255, 255, 0.02);
   max-width: 1300px;
   width: 100%;
 }
-
 
 .row-header {
   display: flex;
