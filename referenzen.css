@@ -84,6 +84,19 @@ header .container-row .box2 {
   border-bottom: none;
 }
 
+.logo2 {
+  height: auto;
+  width: 150px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo2:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
 /* ===========================
    Hero / Bildbereich
 =========================== */
@@ -110,6 +123,33 @@ header .container-row .box2 {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.main-content2 {
+  width: 100%;
+  height: 1000px !important;
+  padding-top: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.main-content2-wrapper {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.main-content3 {
+  width: 100%;
+  height: 1000px !important;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
   text-align: center;
   padding-bottom: 30px;
 }
@@ -153,6 +193,16 @@ header .container-row .box2 {
   max-width: 1300px;
   width: 100%;
 }
+
+.row-bottom {
+  position: relative;
+  padding: 10px 66px;
+  padding-bottom:50px;
+  background: rgba(255, 255, 255, 0.02);
+  max-width: 1300px;
+  width: 100%;
+}
+
 
 .row-header {
   display: flex;
