@@ -92,7 +92,7 @@ header .container-row .box2 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 250px;
+  height: 290px;
   background: #f3f3f3;
 }
 
@@ -126,6 +126,7 @@ header .container-row .box2 {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding-bottom: 50px;
 }
 
 .main-content2-right {
@@ -344,7 +345,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
+  font-size: 19px;
 }
 
 .icon-container svg {
@@ -361,4 +362,8 @@ a:hover {
 .icon-container svg[stroke="currentColor"] path,
 .icon-container svg[stroke="currentColor"] circle {
   stroke: currentColor;
+}
+
+.icon-container-text {
+  text-align: start;
 }

@@ -59,6 +59,7 @@
           <p>Hegau Haustechnik.</p>
           <p>Pfaffenhäule 10</p>
           <p>78224 Singen</p>
+          <br />
 
           <div class="icon-container">
             <svg
@@ -111,20 +112,53 @@
             </svg>
             <a href="tel:+491711234567">www.hegau-haustechnik.de</a>
           </div>
+          <br />
+
+          <p class="icon-container-text">
+            Sie haben uns nicht erreicht? Nutzen Sie unseren Rückruf-Service
+            oder das Kontaktformular. Wir melden uns bei Ihnen
+          </p>
         </div>
 
         <div class="main-content2-right">
           <h3>Kontaktformular</h3>
 
-          <p>
-            Unser Anspruch an uns selbst ist es, hoch qualitative und
-            verlässliche Arbeit in jedem Projekt zu gewährleisten und Ihren
-            Ansprüchen mehr als zu genügen. Dafür unverzichtbar sind in unseren
-            Augen eine individuelle Beratung und ein kompetentes Fachwissen
-            unseres Teams. Um in unserer Branche ständig auf dem Laufenden zu
-            bleiben, nehmen wir regelmäßig an Schulungen und Fortbildungen teil.
-            Überzeugen Sie sich selbst.
-          </p>
+     <form action="dein-server-script.php" method="post" class="kontaktformular">
+  <!-- Vorname -->
+  <div class="form-group">
+    <input type="text" id="vorname" name="vorname" placeholder="Vorname" required>
+  </div>
+
+  <!-- Nachname -->
+  <div class="form-group">
+    <input type="text" id="nachname" name="nachname" placeholder="Nachname" required>
+  </div>
+
+  <!-- Telefon -->
+  <div class="form-group">
+    <input type="tel" id="telefon" name="telefon" placeholder="Telefon" required>
+  </div>
+
+  <!-- E-Mail -->
+  <div class="form-group">
+    <input type="email" id="email" name="email" placeholder="E-Mail" required>
+  </div>
+
+  <!-- Mitteilung -->
+  <div class="form-group">
+    <textarea id="mitteilung" name="mitteilung" rows="5" placeholder="Mitteilung" required></textarea>
+  </div>
+
+  <!-- Google reCAPTCHA -->
+  <div class="g-recaptcha" data-sitekey="DEIN-SITE-KEY"></div>
+
+  <!-- Senden-Button -->
+  <button type="submit">Anfrage senden</button>
+</form>
+
+<!-- Google reCAPTCHA Script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
         </div>
       </div>
     </main>
