@@ -203,6 +203,7 @@ header .container-row .box2 {
   visibility: hidden;
   margin-top: 5px;
   margin-bottom: 5px;
+  text-align: start;
 }
 
 .error-message.visible {
