@@ -1,13 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("kontaktformular");
-
-  // Alle Input- und Textarea-Felder auswählen
   const fields = form.querySelectorAll("input, textarea");
 
   fields.forEach((field) => {
     const error = field.parentElement.querySelector(".error-message");
 
-    // Prüfen, sobald das Feld verlassen wird
     field.addEventListener("blur", () => {
       if (!field.checkValidity()) {
         error.classList.add("visible");
@@ -16,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // Optional: beim Tippen die Meldung live ausblenden
     field.addEventListener("input", () => {
       if (field.checkValidity()) {
         error.classList.remove("visible");
@@ -24,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Absenden weiterhin validieren
   form.addEventListener("submit", function (e) {
     let valid = true;
 
@@ -36,6 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    if (!valid) e.preventDefault(); // Formular nicht absenden
+    if (!valid) e.preventDefault();
   });
 });

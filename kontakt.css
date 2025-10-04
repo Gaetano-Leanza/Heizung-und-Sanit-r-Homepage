@@ -160,22 +160,22 @@ header .container-row .box2 {
 }
 
 #nachname {
-  width: 100%;
+  width: 450px;
   height: 40px;
 }
 
 #telefon {
-  width: 100%;
+  width: 450px;
   height: 40px;
 }
 
 #email {
-  width: 100%;
+  width: 450px;
   height: 40px;
 }
 
 #mitteilung {
-  width: 100%;
+  width: 450px;
   height: 100px;
 }
 
@@ -208,6 +208,7 @@ header .container-row .box2 {
 .error-message.visible {
   visibility: visible;
 }
+
 
 /* ===========================
    Footer
@@ -344,8 +345,10 @@ a:hover {
 }
 
 .contact-button {
-  display: inline-block;
+  display: block;
   margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 0;
   background-color: #e30613;
   color: white;
   font-size: 16px;

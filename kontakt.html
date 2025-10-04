@@ -123,85 +123,91 @@
         <div class="main-content2-right">
           <h3>Kontaktformular</h3>
 
-         <form
-  id="kontaktformular"
-  action="dein-server-script.php"
-  method="post"
-  class="kontaktformular"
-  novalidate
->
-  <!-- Vorname -->
-  <div class="form-group">
-    <input
-      type="text"
-      id="vorname"
-      name="vorname"
-      placeholder="Vorname"
-      required
-    />
-    <div class="error-message">Bitte gib deinen Vornamen ein.</div>
-  </div>
+          <form
+            id="kontaktformular"
+            action="dein-server-script.php"
+            method="post"
+            class="kontaktformular"
+            novalidate
+          >
+            <!-- Vorname -->
+            <div class="form-group">
+              <input
+                type="text"
+                id="vorname"
+                name="vorname"
+                placeholder="Vorname"
+                required
+                pattern="^[A-Za-zÄÖÜäöüß]{3,}$"
+              />
+              <div class="error-message">
+                Bitte gib einen gültigen Vornamen ein.
+              </div>
+            </div>
 
-  <!-- Nachname -->
-  <div class="form-group">
-    <input
-      type="text"
-      id="nachname"
-      name="nachname"
-      placeholder="Nachname"
-      required
-    />
-    <div class="error-message">Bitte gib deinen Nachnamen ein.</div>
-  </div>
+            <!-- Nachname -->
+            <div class="form-group">
+              <input
+                type="text"
+                id="nachname"
+                name="nachname"
+                placeholder="Nachname"
+                required
+                pattern="^[A-Za-zÄÖÜäöüß]{3,}$"
+              />
+              <div class="error-message">
+                Bitte gib einen gültigen Nachnamen ein.
+              </div>
+            </div>
 
-  <!-- Telefon -->
-  <div class="form-group">
-    <input
-      type="tel"
-      id="telefon"
-      name="telefon"
-      placeholder="Telefon"
-      pattern="^[\d\s+\-]{6,}$"
-      inputmode="tel"
-      required
-    />
-    <div class="error-message">
-      Bitte gib eine gültige Telefonnummer ein.
-    </div>
-  </div>
+            <!-- Telefon -->
+            <div class="form-group">
+              <input
+                type="tel"
+                id="telefon"
+                name="telefon"
+                placeholder="Telefon"
+                pattern="^[\d\s+\-]{6,}$"
+                inputmode="tel"
+                required
+              />
+              <div class="error-message">
+                Bitte gib eine gültige Telefonnummer ein.
+              </div>
+            </div>
 
-  <!-- E-Mail -->
-  <div class="form-group">
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="E-Mail"
-      required
-    />
-    <div class="error-message">
-      Bitte gib eine gültige E-Mail-Adresse ein.
-    </div>
-  </div>
+            <!-- E-Mail -->
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-Mail"
+                required
+              />
+              <div class="error-message">
+                Bitte gib eine gültige E-Mail-Adresse ein.
+              </div>
+            </div>
 
-  <!-- Mitteilung -->
-  <div class="form-group">
-    <textarea
-      id="mitteilung"
-      name="mitteilung"
-      rows="5"
-      placeholder="Mitteilung"
-      required
-    ></textarea>
-    <div class="error-message">Bitte schreibe eine Mitteilung.</div>
-  </div>
+            <!-- Mitteilung -->
+            <div class="form-group">
+              <textarea
+                id="mitteilung"
+                name="mitteilung"
+                rows="5"
+                placeholder="Mitteilung"
+                required
+              ></textarea>
+              <div class="error-message">Bitte schreibe eine Mitteilung.</div>
+            </div>
 
-  <!-- Google reCAPTCHA -->
-  <div class="g-recaptcha" data-sitekey="DEIN-SITE-KEY"></div>
+            <!-- Google reCAPTCHA -->
+            <div class="g-recaptcha" data-sitekey="DEIN-SITE-KEY"></div>
 
-  <!-- Senden-Button -->
-  <button type="submit">Anfrage senden</button>
-</form>
+            <!-- Senden-Button -->
+            <button type="submit" class="contact-button">Anfrage senden</button>
+          </form>
 
           <!-- Google reCAPTCHA Script -->
           <script
