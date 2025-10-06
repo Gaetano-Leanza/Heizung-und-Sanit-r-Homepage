@@ -105,83 +105,86 @@
           frühestmöglicher Eintrittstermin und Gehaltsvorstellung) senden Sie
           bitte per Formular oder E-Mail an
         </p>
+        <a href="tel:+491711234567">info@hegau-haustechnik.de</a>
+        <br />
       </div>
-    <form
-  id="kontaktformular"
-  action="dein-server-script.php"
-  method="post"
-  class="kontaktformular"
-  enctype="multipart/form-data"
-  novalidate
->
-  <!-- Vorname -->
-  <div class="form-group">
-    <input
-      type="text"
-      id="vorname"
-      name="vorname"
-      placeholder="Vorname"
-      required
-      pattern="^[A-Za-zÄÖÜäöüß]{3,}$"
-    />
-    <div class="error-message">
-      Bitte gib einen gültigen Vornamen ein.
-    </div>
-  </div>
+      <form
+        id="kontaktformular"
+        action="dein-server-script.php"
+        method="post"
+        class="kontaktformular"
+        enctype="multipart/form-data"
+        novalidate
+      >
+        <!-- Vorname -->
+        <div class="form-group">
+          <input
+            type="text"
+            id="vorname"
+            name="vorname"
+            placeholder="Vorname"
+            required
+            pattern="^[A-Za-zÄÖÜäöüß]{3,}$"
+          />
+          <div class="error-message">
+            Bitte gib einen gültigen Vornamen ein.
+          </div>
+        </div>
 
-  <!-- Nachname -->
-  <div class="form-group">
-    <input
-      type="text"
-      id="nachname"
-      name="nachname"
-      placeholder="Nachname"
-      required
-      pattern="^[A-Za-zÄÖÜäöüß]{3,}$"
-    />
-    <div class="error-message">
-      Bitte gib einen gültigen Nachnamen ein.
-    </div>
-  </div>
+        <!-- Nachname -->
+        <div class="form-group">
+          <input
+            type="text"
+            id="nachname"
+            name="nachname"
+            placeholder="Nachname"
+            required
+            pattern="^[A-Za-zÄÖÜäöüß]{3,}$"
+          />
+          <div class="error-message">
+            Bitte gib einen gültigen Nachnamen ein.
+          </div>
+        </div>
 
-  <!-- Telefon -->
-  <div class="form-group">
-    <input
-      type="tel"
-      id="telefon"
-      name="telefon"
-      placeholder="Telefon"
-      pattern="^[\d\s+\-]{6,}$"
-      inputmode="tel"
-      required
-    />
-    <div class="error-message">
-      Bitte gib eine gültige Telefonnummer ein.
-    </div>
-  </div>
+        <!-- Telefon -->
+        <div class="form-group">
+          <input
+            type="tel"
+            id="telefon"
+            name="telefon"
+            placeholder="Telefon"
+            pattern="^[\d\s+\-]{6,}$"
+            inputmode="tel"
+            required
+          />
+          <div class="error-message">
+            Bitte gib eine gültige Telefonnummer ein.
+          </div>
+        </div>
 
-  <!-- E-Mail -->
-  <div class="form-group">
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="E-Mail"
-      required
-    />
-    <div class="error-message">
-      Bitte gib eine gültige E-Mail-Adresse ein.
-    </div>
-  </div>
+        <!-- E-Mail -->
+        <div class="form-group">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-Mail"
+            required
+          />
+          <div class="error-message">
+            Bitte gib eine gültige E-Mail-Adresse ein.
+          </div>
+        </div>
 
-  <!-- Datei-Upload -->
-  <p>Ihre Unterlagen</p>
-  <input type="file" name="dateien[]" id="dateien" multiple />
+        <div class="bottom">
+          <!-- Datei-Upload -->
+          <p>Ihre Unterlagen</p>
+          <input type="file" name="dateien[]" id="dateien" multiple />
+        </div>
 
-  <!-- Senden-Button -->
-  <button type="submit" class="contact-button">Anfrage senden</button>
-</form>
-
+        <!-- Senden-Button -->
+        <button type="submit" class="contact-button">Anfrage senden</button>
+      </form>
     </main>
 
     <footer>

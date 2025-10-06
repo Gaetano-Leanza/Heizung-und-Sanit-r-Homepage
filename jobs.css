@@ -119,14 +119,16 @@ header .container-row .box2 {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .accordion {
-  width: 100%;
+  width: 1200px;
   border-collapse: collapse;
   background-color: #dfeaec;
   border-radius: 5px;
   overflow: hidden;
+  margin-top: 30px;
 }
 
 .accordion-item {
@@ -226,13 +228,10 @@ header .container-row .box2 {
   display: none;
 }
 
-.contact-button {
-  background-color: #0078d7;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  cursor: pointer;
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* ===========================
@@ -381,8 +380,10 @@ a:hover {
 }
 
 .contact-button {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   margin-top: 50px;
+  margin-bottom: 50px;
   background-color: #e30613;
   color: white;
   font-size: 16px;
