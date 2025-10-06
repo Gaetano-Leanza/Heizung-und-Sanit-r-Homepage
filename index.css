@@ -16,7 +16,7 @@ main {
 }
 
 .picture .title-picture {
-  width: 64%;
+  width: 1228px;
   height: auto;
   display: block;
 }
@@ -345,3 +345,8 @@ li {
 .left-foot a:hover {
   transform: translateY(-1px) scale(1.01);
 }
+
+@media (max-width: 1200px) {
+  /* Dein CSS-Code für kleinere Bildschirme */
+}
+
