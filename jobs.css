@@ -122,54 +122,118 @@ header .container-row .box2 {
 }
 
 .accordion {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: #dfeaec;
-      border-radius: 5px;
-      overflow: hidden;
-    }
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #dfeaec;
+  border-radius: 5px;
+  overflow: hidden;
+}
 
-    .accordion-item {
-      border-bottom: 1px solid #c8d8da;
-    }
+.accordion-item {
+  border-bottom: 1px solid #c8d8da;
+}
 
-    .accordion-header {
-      background-color: #dfeaec;
-      cursor: pointer;
-      padding: 15px 20px;
-      font-weight: bold;
-      color: #2d3e50;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-    }
+.accordion-header {
+  background-color: #dfeaec;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-weight: bold;
+  color: #2d3e50;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-    .accordion-header:hover {
-      background-color: #cfdee1;
-    }
+.accordion-header:hover {
+  background-color: #cfdee1;
+}
 
-    .accordion-icon {
-      font-size: 20px;
-      margin-right: 10px;
-      transition: transform 0.3s ease;
-    }
+.accordion-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
 
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      background-color: #edf3f4;
-      padding: 0 20px;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-    }
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #edf3f4;
+  padding: 0 20px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
 
-    .accordion-content.open {
-      padding: 15px 20px;
-      max-height: 300px; /* anpassen, falls mehr Inhalt kommt */
-    }
+.accordion-content.open {
+  padding: 15px 20px;
+  max-height: 300px; /* anpassen, falls mehr Inhalt kommt */
+}
 
-    .accordion-item.open .accordion-icon {
-      transform: rotate(45deg);
-    }
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+#vorname {
+  width: 450px;
+  height: 40px;
+}
+
+#nachname {
+  width: 450px;
+  height: 40px;
+}
+
+#telefon {
+  width: 450px;
+  height: 40px;
+}
+
+#email {
+  width: 450px;
+  height: 40px;
+}
+
+.form-group input,
+.form-group textarea {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: #ffffff;
+  outline: none;
+  border-color: #888;
+}
+
+.error-message {
+  font-size: 0.9em;
+  color: red;
+  min-height: 1.2em; /* Platz bleibt reserviert */
+  visibility: hidden;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: start;
+}
+
+.error-message.visible {
+  visibility: visible;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.contact-button {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
 /* ===========================
    Footer
