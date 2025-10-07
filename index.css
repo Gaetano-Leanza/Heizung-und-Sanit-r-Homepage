@@ -347,6 +347,195 @@ li {
 }
 
 @media (max-width: 1200px) {
-  /* Dein CSS-Code für kleinere Bildschirme */
+  header .container-row .box {
+    width: 180px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 180px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 456px;
+  }
+
+  .picture .title-picture {
+    width: 1170px;
+  }
 }
 
+@media (max-width: 1120px) {
+  header .container-row .box {
+    width: 170px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 170px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 426px;
+  }
+
+  .picture .title-picture {
+    width: 1090px;
+  }
+}
+
+@media (max-width: 1060px) {
+  header .container-row .box {
+    width: 160px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 160px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 388px;
+  }
+
+  .picture .title-picture {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  header .container-row .box {
+    width: 150px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 150px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 358px;
+  }
+
+  .picture .title-picture {
+    width: 920px;
+  }
+}
+
+@media (max-width: 935px) {
+  header .container-row .box {
+    width: 140px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 140px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 338px;
+  }
+
+  .picture .title-picture {
+    width: 870px;
+  }
+}
+
+@media (max-width: 875px) {
+  header .container-row .box {
+    width: 130px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 130px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 310px;
+  }
+
+  .picture .title-picture {
+    width: 800px;
+  }
+}
+
+@media (max-width: 815px) {
+  header .container-row .box {
+    width: 120px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 120px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 270px;
+  }
+
+  .picture .title-picture {
+    width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container-row {
+    display: none !important;
+  }
+
+  .navbar {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #39a5d5;
+    height: 60px;
+    width: 100%;
+    position: relative;
+  }
+
+  .burger {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    background-color: #39a5d5;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+  }
+
+  .nav-links a:hover {
+    background-color: #39a5d5;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
