@@ -137,7 +137,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90px;
+  height: 105px !important;
 }
 
 .left-foot,
