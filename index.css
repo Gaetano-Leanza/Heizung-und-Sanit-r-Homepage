@@ -139,7 +139,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90px !important;
+  height: 105px !important;
 }
 
 .left-foot {
@@ -229,6 +229,7 @@ li {
 .blue {
   color: #51b9ea;
   font-weight: 550;
+  font-size: 19px;
 }
 
 .gray {
