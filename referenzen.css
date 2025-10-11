@@ -684,3 +684,36 @@ a:hover {
     }
   }
 }
+
+@media (max-width: 630px) {
+  .left-foot {
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 580px) {
+  .left-side {
+    width: 500px;
+  }
+
+  .left-foot {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 530px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left-foot {
+    padding-right: 0px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+  }
+}
+

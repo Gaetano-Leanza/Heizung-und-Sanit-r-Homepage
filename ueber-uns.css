@@ -537,16 +537,15 @@ a:hover {
     height: 40px;
     font-size: 24px;
   }
-  
+
   .modal-prev {
     left: 10px;
   }
-  
+
   .modal-next {
     right: 10px;
   }
 }
-
 
 @keyframes modalZoom {
   from {
@@ -620,7 +619,340 @@ a:hover {
   }
 }
 
+@media (max-width: 768px) {
+  header .container-row {
+    display: none !important;
+  }
 
+  .navbar {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #51b9ea;
+    height: 60px;
+    width: 100%;
+    position: relative;
+  }
+
+  .burger {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .burger:hover {
+    transform: scale(1.1);
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    background-color: #51b9ea;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .nav-links a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: #39a5d5;
+    color: #ffffff;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  header .container-row .box {
+    width: 180px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 180px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 456px;
+  }
+
+  .picture .title-picture {
+    width: 1170px;
+  }
+
+  .main-content {
+    height: 500px;
+    width: 1200px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .left-side {
+    width: 600px;
+  }
+
+  .right-side {
+    width: 300px;
+  }
+}
+
+@media (max-width: 1120px) {
+  header .container-row .box {
+    width: 170px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 170px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 426px;
+  }
+
+  .picture .title-picture {
+    width: 1090px;
+  }
+}
+
+@media (max-width: 1060px) {
+  header .container-row .box {
+    width: 160px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 160px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 388px;
+  }
+
+  .picture .title-picture {
+    width: 1000px;
+  }
+
+  .main-content {
+    height: 550px;
+  }
+
+  .left-side {
+    width: 550px;
+  }
+
+  .right-side {
+    width: 300px;
+  }
+
+  h1,
+  h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 1015px) {
+  header .container-row .box {
+    width: 150px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 150px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 358px;
+  }
+
+  .picture .title-picture {
+    width: 920px;
+  }
+
+  .left-side {
+    width: 530px;
+    padding-right: 20px;
+  }
+
+  .right-side {
+    width: 280px;
+    padding-left: 20px;
+  }
+
+  h1,
+  h2 {
+    font-size: 32px;
+  }
+
+  .calendly-inline-widget {
+    width: 70%;
+    max-width: 1000px;
+    height: 700px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background: none;
+  }
+
+  .calendly-container {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 935px) {
+  header .container-row .box {
+    width: 140px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 140px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 338px;
+  }
+
+  .picture .title-picture {
+    width: 870px;
+  }
+
+  .left-side {
+    width: 530px;
+    padding-right: 10px;
+  }
+
+  .right-side {
+    width: 280px;
+    padding-left: 10px;
+  }
+
+  .right-foot {
+    display: none;
+  }
+
+  h1,
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 875px) {
+  header .container-row .box {
+    width: 130px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 130px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 310px;
+  }
+
+  .picture .title-picture {
+    width: 800px;
+  }
+
+  .main-content {
+    height: 580px;
+  }
+
+  .left-side {
+    width: 480px;
+  }
+
+  .right-side {
+    width: 280px;
+  }
+
+  h1,
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 815px) {
+  header .container-row .box {
+    width: 120px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 120px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 270px;
+  }
+
+  .picture .title-picture {
+    width: 800px;
+  }
+
+  .main-content {
+    height: 600px;
+  }
+
+  .left-side {
+    width: 430px;
+  }
+
+  .right-side {
+    width: 280px;
+  }
+}
 
 @media (max-width: 768px) {
   header .container-row {
@@ -674,12 +1006,78 @@ a:hover {
   }
 
   .nav-links a:hover {
-    background-color: #39A5D5; 
-    color: #ffffff; 
+    background-color: #39a5d5;
+    color: #ffffff;
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .main-content {
+    height: 800px;
+    width: 1200px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side {
+    width: 700px;
+  }
+
+  .right-side {
+    width: 700px;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-button {
+    margin-top: 10px;
+  }
+
+  h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 630px) {
+  .left-foot {
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 580px) {
+  .left-side {
+    width: 500px;
+  }
+
+  .left-foot {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 530px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .left-foot {
+    padding-right: 0px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
   }
 }
