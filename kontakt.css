@@ -1,6 +1,3 @@
-/* ===========================
-   Grundlayout
-=========================== */
 html,
 body {
   width: 100%;
@@ -13,18 +10,14 @@ body {
   font-family: "zabars", Arial, Helvetica, sans-serif;
 }
 
-/* sorgt dafür, dass Main den restlichen Platz einnimmt */
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Inhalt oben beginnen */
+  justify-content: flex-start; 
 }
 
-/* ===========================
-   Header
-=========================== */
 header {
   background: white;
   display: flex;
@@ -84,9 +77,6 @@ header .container-row .box2 {
   border-bottom: none;
 }
 
-/* ===========================
-   Hero / Bildbereich
-=========================== */
 .picture {
   display: flex;
   justify-content: center;
@@ -94,6 +84,7 @@ header .container-row .box2 {
   width: 100%;
   height: 290px;
   background: #f3f3f3;
+  overflow: hidden;
 }
 
 .picture .title-picture {
@@ -102,9 +93,6 @@ header .container-row .box2 {
   display: block;
 }
 
-/* ===========================
-   Hauptinhalte
-=========================== */
 .main-content {
   width: 1200px;
   padding-top: 50px;
@@ -199,7 +187,7 @@ header .container-row .box2 {
 .error-message {
   font-size: 0.9em;
   color: red;
-  min-height: 1.2em; /* Platz bleibt reserviert */
+  min-height: 1.2em; 
   visibility: hidden;
   margin-top: 5px;
   margin-bottom: 5px;
@@ -210,9 +198,6 @@ header .container-row .box2 {
   visibility: visible;
 }
 
-/* ===========================
-   Footer
-=========================== */
 footer {
   background: #51b9ea;
   color: white;
@@ -259,9 +244,6 @@ footer .social-icons img:hover {
   transform: scale(1.2);
 }
 
-/* ===========================
-   Typografie
-=========================== */
 @font-face {
   font-family: "Roboto";
   src: url("assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
