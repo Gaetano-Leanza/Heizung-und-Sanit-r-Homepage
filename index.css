@@ -24,7 +24,8 @@ main {
 
 .main-content {
   height: 500px;
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   padding-top: 50px;
   display: flex;
   flex-direction: row;
@@ -370,7 +371,7 @@ li {
 
   .main-content {
     height: 500px;
-    width: 1200px;
+    max-width: 1200px;
     padding-top: 50px;
     display: flex;
     flex-direction: row;
@@ -599,7 +600,7 @@ li {
   }
 
   .picture .title-picture {
-    width: 800px;
+    max-width: 800px;
   }
 
   .main-content {
@@ -684,7 +685,6 @@ li {
 
   .main-content {
     height: 800px;
-    width: 1200px;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
@@ -696,9 +696,12 @@ li {
   }
 
   .right-side {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     display: flex;
     align-items: center;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .contact-button {
@@ -815,4 +818,5 @@ li {
   .left-side {
     width: 300px;
   }
+
 }
