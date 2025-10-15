@@ -731,6 +731,11 @@ a:hover {
   .main-content-right {
     width: 95%;
   }
+
+  .main-content2-right,
+  .main-content2-left {
+    padding-right: 20px !important;
+  }
 }
 
 @media (max-width: 630px) {
@@ -795,6 +800,24 @@ a:hover {
 
   .main-content {
     height: 800px;
+  }
+
+  .main-content2-wrapper {
+    flex-direction: column;
+  }
+
+  .main-content2-right {
+    width: 90%;
+  }
+
+  .main-content2-left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  h4 {
+    margin-top: 0px;
   }
 }
 
