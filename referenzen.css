@@ -328,7 +328,6 @@ header .container-row .box2 {
   right: 40px;
 }
 
-
 @keyframes modalZoom {
   from {
     transform: scale(0.8);
@@ -576,10 +575,10 @@ a:hover {
   stroke: currentColor;
 }
 
-
 @media (max-width: 1450px) {
-  .row {
-    width: 700px;
+  .row,
+  .row-bottom {
+    width: 865px;
   }
 }
 
@@ -653,19 +652,6 @@ a:hover {
     width: 1570px;
   }
 
-  .main-content {
-    height: 550px;
-    height: 950px;
-  }
-
-  .left-side {
-    width: 550px;
-  }
-
-  .right-side {
-    width: 300px;
-  }
-
   h1,
   h2 {
     font-size: 34px;
@@ -707,45 +693,9 @@ a:hover {
     font-size: 32px;
   }
 
-  .calendly-inline-widget {
-    width: 70%;
-    max-width: 1000px;
-    height: 700px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    background: none;
-  }
-
-  .calendly-container {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    flex-wrap: wrap;
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0 auto;
-    margin-bottom: 50px;
-  }
-}
-
-@media (max-width: 986px) {
-  .main-content {
-    height: 970px;
-  }
-}
-
-@media (max-width: 973px) {
-  .main-content {
-    height: 990px;
-  }
-}
-
-@media (max-width: 966px) {
-  .main-content {
-    height: 1010px;
+  .row,
+  .row-bottom {
+    width: 412px;
   }
 }
 
@@ -809,10 +759,6 @@ a:hover {
     width: 1275px;
   }
 
-  .main-content {
-    height: 1020px;
-  }
-
   .left-side {
     width: 480px;
   }
@@ -830,16 +776,6 @@ a:hover {
     max-width: 90%;
     max-height: 85vh;
     padding: 10px;
-  }
-}
-
-@media (max-width: 850px) {
-  .row {
-    width: 350px;
-  }
-
-  .main-content {
-    height: 1040px;
   }
 }
 
@@ -876,6 +812,10 @@ a:hover {
     max-height: 85vh;
     padding: 10px;
   }
+
+  .main-content {
+    width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -892,10 +832,6 @@ a:hover {
   .modal-next {
     right: 10px;
   }
-}
-
-
-@media (max-width: 768px) {
   .certificate-modal img {
     max-width: 95%;
     max-height: 85vh;
@@ -1097,17 +1033,6 @@ a:hover {
     }
   }
 
-  .main-content {
-    height: 1040px;
-    width: 95%;
-    padding-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   .left-side {
     width: 700px;
   }
@@ -1142,24 +1067,6 @@ a:hover {
   }
 }
 
-@media (max-width: 732px) {
-  .main-content {
-    height: 1060px;
-  }
-}
-
-@media (max-width: 670px) {
-  .main-content {
-    height: 1090px;
-  }
-}
-
-@media (max-width: 643px) {
-  .main-content {
-    height: 1110px;
-  }
-}
-
 @media (max-width: 630px) {
   .left-foot {
     padding-right: 80px;
@@ -1167,14 +1074,21 @@ a:hover {
 }
 
 @media (max-width: 596px) {
-  .main-content {
-    height: 1140px;
+  .row,
+  .row-bottom {
+    width: 300px;
   }
-}
 
-@media (max-width: 589px) {
-  .main-content {
-    height: 1210px;
+  .card {
+    width: 260px;
+  }
+
+  .card1 {
+    width: 260px;
+  }
+
+  .card2 {
+    width: 260px;
   }
 }
 
@@ -1185,18 +1099,6 @@ a:hover {
 
   .left-foot {
     padding-right: 40px;
-  }
-}
-
-@media (max-width: 571px) {
-  .main-content {
-    height: 1230px;
-  }
-}
-
-@media (max-width: 534px) {
-  .main-content {
-    height: 1260px;
   }
 }
 
@@ -1216,47 +1118,7 @@ a:hover {
   }
 }
 
-@media (max-width: 503px) {
-  .main-content {
-    height: 1280px;
-  }
-}
-
-@media (max-width: 500px) {
-  .row {
-    width: 300px;
-  }
-
-  .card {
-    min-width: 260px;
-  }
-
-  .card1 {
-    min-width: 260px;
-  }
-
-  .card2 {
-    min-width: 260px;
-  }
-}
-
-@media (max-width: 497px) {
-  .main-content {
-    height: 1310px;
-  }
-}
-
-@media (max-width: 490px) {
-  .main-content {
-    height: 1330px;
-  }
-}
-
 @media (max-width: 462px) {
-  .main-content {
-    height: 1350px;
-  }
-
   .certificate-modal img {
     max-width: 90%;
     max-height: 85vh;
@@ -1265,97 +1127,43 @@ a:hover {
 }
 
 @media (max-width: 450px) {
-  .row {
+  .row,
+  .row-bottom {
     width: 250px;
   }
 
   .card {
-    min-width: 210px;
+    width: 210px;
   }
 
   .card1 {
-    min-width: 210px;
+    width: 210px;
   }
 
   .card2 {
-    min-width: 210px;
-  }
-}
-
-@media (max-width: 438px) {
-  .main-content {
-    height: 1410px;
-  }
-}
-
-@media (max-width: 422px) {
-  .main-content {
-    height: 1460px;
-  }
-}
-
-@media (max-width: 404px) {
-  .main-content {
-    height: 1490px;
+    width: 210px;
   }
 }
 
 @media (max-width: 400px) {
-  .row {
-    width: 200px;
+  .row,
+  .row-bottom {
+    width: 190px;
+    height: 350px;
   }
 
   .card {
-    min-width: 160px;
+    width: 150px;
+    height: 350px;
   }
 
   .card1 {
-    min-width: 160px;
+    width: 150px;
+    height: 350px;
   }
 
   .card2 {
-    min-width: 160px;
-  }
-}
-
-@media (max-width: 394px) {
-  .main-content {
-    height: 1510px;
-  }
-}
-
-@media (max-width: 387px) {
-  .main-content {
-    height: 1530px;
-  }
-}
-
-@media (max-width: 379px) {
-  .main-content {
-    height: 1570px;
-  }
-}
-
-@media (max-width: 366px) {
-  .main-content {
-    height: 1600px;
-  }
-}
-
-@media (max-width: 360px) {
-  .main-content {
-    height: 1620px;
-  }
-}
-
-@media (max-width: 349px) {
-  .main-content {
-    height: 1650px;
-  }
-}
-
-@media (max-width: 336px) {
-  .main-content {
-    height: 1690px;
+    width: 150px;
+    height: 350px;
   }
 }
