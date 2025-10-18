@@ -755,6 +755,7 @@ a:hover {
     width: 50%;
     padding-left: 240px;
     padding-right: 10px;
+    padding-bottom: 20px;
   }
 
   .main-content2-right {
@@ -858,6 +859,11 @@ a:hover {
     align-items: center;
   }
 
+  .icon-container-text {
+    width: 600px;
+    text-align: center;
+  }
+
   .main-content2-right {
     width: 100%;
     padding-right: 0px;
@@ -890,6 +896,11 @@ a:hover {
 @media (max-width: 630px) {
   .left-foot {
     padding-right: 80px;
+  }
+
+  .icon-container-text {
+    width: 500px;
+    text-align: center;
   }
 
   #vorname {
@@ -957,6 +968,11 @@ a:hover {
     justify-content: center;
     margin-top: 2px;
   }
+
+  .icon-container-text {
+    width: 400px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 450px) {
@@ -983,22 +999,27 @@ a:hover {
 
 @media (max-width: 400px) {
   #vorname {
-    width: 290px;
+    width: 310px;
   }
 
   #nachname {
-    width: 290px;
+    width: 310px;
   }
 
   #telefon {
-    width: 290px;
+    width: 310px;
   }
 
   #email {
-    width: 290px;
+    width: 310px;
   }
 
   #mitteilung {
-    width: 290px;
+    width: 310px;
+  }
+
+   .icon-container-text {
+    width: 300px;
+    text-align: center;
   }
 }
