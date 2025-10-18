@@ -404,6 +404,21 @@ a:hover {
   text-align: start;
 }
 
+@media (max-width: 1300px) {
+  main {
+    width: 100%;
+  }
+
+  .main-content2-left {
+    width: 50%;
+    padding-left: 50px;
+  }
+
+  .main-content2-right {
+    width: 50%;
+  }
+}
+
 @media (max-width: 1200px) {
   header .container-row .box {
     width: 180px;
@@ -413,15 +428,6 @@ a:hover {
   header .container-row .box2 {
     width: 180px;
     height: 102px;
-  }
-
-  .main-content {
-    height: 500px;
-    max-width: 1200px;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 
   .picture {
@@ -438,6 +444,24 @@ a:hover {
 
   .right-side {
     width: 300px;
+  }
+
+  .text-top {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .main-content2-left {
+    width: 50%;
+    padding-left: 80px;
+  }
+
+  .main-content2-right {
+    width: 50%;
   }
 }
 
@@ -459,6 +483,25 @@ a:hover {
   .picture .title-picture {
     width: 1628px;
   }
+
+  .text-top {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .main-content2-left {
+    width: 50%;
+    padding-left: 100px;
+  }
+
+  .main-content2-right {
+    width: 50%;
+    padding-right: 50px;
+  }
 }
 
 @media (max-width: 1060px) {
@@ -470,10 +513,6 @@ a:hover {
   header .container-row .box2 {
     width: 160px;
     height: 102px;
-  }
-
-  .main-content {
-    height: 550px;
   }
 
   .left-side {
@@ -495,6 +534,25 @@ a:hover {
 
   .picture .title-picture {
     width: 1528px;
+  }
+
+  .text-top {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .main-content2-left {
+    width: 50%;
+    padding-left: 120px;
+  }
+
+  .main-content2-right {
+    width: 50%;
+    padding-right: 100px;
   }
 }
 
@@ -530,6 +588,26 @@ a:hover {
 
   .picture .title-picture {
     width: 1438px;
+  }
+
+  .text-top {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .main-content2-left {
+    width: 50%;
+    padding-left: 170px;
+    padding-right: 20px;
+  }
+
+  .main-content2-right {
+    width: 50%;
+    padding-right: 170px;
   }
 }
 
@@ -570,6 +648,25 @@ a:hover {
   .picture .title-picture {
     width: 1338px;
   }
+
+  .text-top {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .main-content2-left {
+    width: 50%;
+    padding-left: 190px;
+  }
+
+  .main-content2-right {
+    width: 50%;
+    padding-right: 190px;
+  }
 }
 
 @media (max-width: 875px) {
@@ -581,10 +678,6 @@ a:hover {
   header .container-row .box2 {
     width: 130px;
     height: 102px;
-  }
-
-  .main-content {
-    height: 580px;
   }
 
   .left-side {
@@ -607,6 +700,45 @@ a:hover {
   .picture .title-picture {
     width: 1238px;
   }
+
+  .text-top {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .main-content2-left {
+    width: 50%;
+    padding-left: 210px;
+  }
+
+  .main-content2-right {
+    width: 50%;
+    padding-right: 210px;
+  }
+
+  #vorname {
+    width: 400px;
+  }
+
+  #nachname {
+    width: 400px;
+  }
+
+  #telefon {
+    width: 400px;
+  }
+
+  #email {
+    width: 400px;
+  }
+
+  #mitteilung {
+    width: 400px;
+  }
 }
 
 @media (max-width: 815px) {
@@ -618,10 +750,6 @@ a:hover {
   header .container-row .box2 {
     width: 120px;
     height: 102px;
-  }
-
-  .main-content {
-    height: 600px;
   }
 
   .left-side {
@@ -638,6 +766,26 @@ a:hover {
 
   .picture .title-picture {
     width: 1138px;
+  }
+
+  .text-top {
+    padding-left: 220px;
+    padding-right: 220px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .main-content2-left {
+    width: 50%;
+    padding-left: 240px;
+    padding-right: 10px;
+  }
+
+  .main-content2-right {
+    width: 50%;
+    padding-right: 240px;
   }
 }
 
@@ -715,11 +863,84 @@ a:hover {
   .picture .title-picture {
     width: 1058px;
   }
+
+  .main-content2 {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-top {
+    padding-left: 220px;
+    padding-right: 220px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .main-content2-left {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-content2-right {
+    width: 100%;
+    padding-right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #vorname {
+    width: 600px;
+  }
+
+  #nachname {
+    width: 100%;
+  }
+
+  #telefon {
+    width: 100%;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  #mitteilung {
+    width: 100%;
+  }
 }
 
 @media (max-width: 630px) {
   .left-foot {
     padding-right: 80px;
+  }
+
+  #vorname {
+    width: 500px;
+  }
+
+  #nachname {
+    width: 100%;
+  }
+
+  #telefon {
+    width: 100%;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  #mitteilung {
+    width: 100%;
   }
 }
 
@@ -730,6 +951,26 @@ a:hover {
 
   .left-foot {
     padding-right: 40px;
+  }
+
+  #vorname {
+    width: 400px;
+  }
+
+  #nachname {
+    width: 100%;
+  }
+
+  #telefon {
+    width: 100%;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  #mitteilung {
+    width: 100%;
   }
 }
 
@@ -746,5 +987,50 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 2px;
+  }
+}
+
+@media (max-width: 450px) {
+  #vorname {
+    width: 350px;
+  }
+
+  #nachname {
+    width: 100%;
+  }
+
+  #telefon {
+    width: 100%;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  #mitteilung {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 400px) {
+  #vorname {
+    width: 290px;
+  }
+
+  #nachname {
+    width: 290px;
+  }
+
+  #telefon {
+    width: 290px;
+  }
+
+  #email {
+    width: 290px;
+  }
+
+  #mitteilung {
+    width: 290px;
   }
 }
