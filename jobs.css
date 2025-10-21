@@ -326,6 +326,15 @@ li {
   text-align: center;
 }
 
+p,
+b,
+li {
+  font-size: 19px;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 a {
   color: #51b9ea;
   text-decoration: none;
@@ -481,6 +490,16 @@ li {
   }
 }
 
+@media (max-width: 1260px) {
+  .accordion {
+    width: 1100px;
+  }
+
+  .accordion-header {
+    width: 1060px;
+  }
+}
+
 @media (max-width: 1200px) {
   header .container-row .box {
     width: 180px;
@@ -499,6 +518,16 @@ li {
 
   .picture .title-picture {
     width: 1170px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .accordion {
+    width: 1000px;
+  }
+
+  .accordion-header {
+    width: 960px;
   }
 }
 
@@ -538,6 +567,14 @@ li {
   .divider h4 {
     padding-left: 115px;
     padding-right: 115px;
+  }
+
+  .accordion {
+    width: 900px;
+  }
+
+  .accordion-header {
+    width: 860px;
   }
 }
 
@@ -635,6 +672,14 @@ li {
   h2 {
     font-size: 30px;
   }
+
+  .accordion {
+    width: 800px;
+  }
+
+  .accordion-header {
+    width: 760px;
+  }
 }
 
 @media (max-width: 923px) {
@@ -681,6 +726,14 @@ li {
   .divider h4 {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .accordion {
+    width: 700px;
+  }
+
+  .accordion-header {
+    width: 660px;
   }
 }
 
@@ -779,11 +832,31 @@ li {
       transform: translateY(0);
     }
   }
+
+  .accordion {
+    width: 600px;
+  }
+
+  .accordion-header {
+    width: 560px;
+  }
+
+  .main-content {
+    padding-top: 20px;
+  }
 }
 
 @media (max-width: 630px) {
   .left-foot {
     padding-right: 80px;
+  }
+
+  .accordion {
+    width: 500px;
+  }
+
+  .accordion-header {
+    width: 460px;
   }
 }
 
@@ -814,11 +887,35 @@ li {
     justify-content: center;
     margin-top: 2px;
   }
+
+  .accordion {
+    width: 400px;
+  }
+
+  .accordion-header {
+    width: 360px;
+  }
 }
 
 @media (max-width: 520px) {
   .divider {
     height: 95px;
+  }
+
+  #vorname {
+    width: 350px;
+  }
+
+  #nachname {
+    width: 100%;
+  }
+
+  #telefon {
+    width: 100%;
+  }
+
+  #email {
+    width: 100%;
   }
 }
 
@@ -832,6 +929,32 @@ li {
     text-align: center;
     padding-left: 5px;
     padding-right: 5px;
+  }
+
+  .accordion {
+    width: 310px;
+  }
+
+  .accordion-header {
+    width: 270px;
+  }
+}
+
+@media (max-width: 400px) {
+  #vorname {
+    width: 300px;
+  }
+
+  #nachname {
+    width: 100%;
+  }
+
+  #telefon {
+    width: 100%;
+  }
+
+  #email {
+    width: 100%;
   }
 }
 
@@ -849,4 +972,3 @@ li {
     padding-right: 10px;
   }
 }
-
