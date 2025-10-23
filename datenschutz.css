@@ -328,6 +328,276 @@ a:hover {
   stroke: currentColor;
 }
 
+
+@media (max-width: 1200px) {
+  header .container-row .box {
+    width: 180px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 180px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 256px;
+  }
+
+  .picture .title-picture {
+    width: 1670px;
+  }
+
+  .main-content {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-content p,
+  .icon-container {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 1120px) {
+  header .container-row .box {
+    width: 170px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 170px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 256px;
+  }
+
+  .picture .title-picture {
+    width: 1570px;
+  }
+}
+
+@media (max-width: 1060px) {
+  header .container-row .box {
+    width: 160px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 160px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 236px;
+  }
+
+  .picture .title-picture {
+    width: 1470px;
+  }
+
+  h1,
+  h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 1015px) {
+  header .container-row .box {
+    width: 150px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 150px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 220px;
+  }
+
+  .picture .title-picture {
+    width: 1370px;
+  }
+
+  h1,
+  h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 935px) {
+  header .container-row .box {
+    width: 140px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 140px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 200px;
+  }
+
+  .picture .title-picture {
+    width: 1270px;
+  }
+
+  .right-foot {
+    display: none;
+  }
+
+  h1,
+  h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 875px) {
+  header .container-row .box {
+    width: 130px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 130px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 190px;
+  }
+
+  .picture .title-picture {
+    width: 1170px;
+  }
+
+  h1,
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 815px) {
+  header .container-row .box {
+    width: 120px;
+    height: 102px;
+  }
+
+  header .container-row .box2 {
+    width: 120px;
+    height: 102px;
+  }
+
+  .picture {
+    width: 100%;
+    height: 170px;
+  }
+
+  .picture .title-picture {
+    width: 1070px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container-row {
+    display: none !important;
+  }
+
+  .navbar {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #51b9ea;
+    height: 60px;
+    width: 100%;
+    position: relative;
+  }
+
+  .burger {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .burger:hover {
+    transform: scale(1.1);
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    background-color: #51b9ea;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .nav-links a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    background-color: #39a5d5;
+    color: #ffffff;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  h2 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+   .picture {
+    width: 100%;
+    height: 170px;
+  }
+
+  .picture .title-picture {
+    width: 1320px;
+  }
+}
+
+@media (max-width: 690px) {
+  .calendly-inline-widget {
+    width: 80%;
+  }
+}
+
 @media (max-width: 630px) {
   .left-foot {
     padding-right: 80px;
@@ -345,6 +615,10 @@ a:hover {
 }
 
 @media (max-width: 530px) {
+  .left-side {
+    width: 450px;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -357,5 +631,18 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 2px;
+  }
+}
+
+@media (max-width: 440px) {
+  h1,
+  h2 {
+    font-size: 26px;
+  }
+
+  h2 {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
