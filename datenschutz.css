@@ -117,9 +117,6 @@ header .container-row .box2 {
   width: 30%;
 }
 
-/* ===========================
-   Footer
-=========================== */
 footer {
   background: #51b9ea;
   color: white;
@@ -166,9 +163,6 @@ footer .social-icons img:hover {
   transform: scale(1.2);
 }
 
-/* ===========================
-   Typografie
-=========================== */
 @font-face {
   font-family: "Roboto";
   src: url("assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
@@ -238,9 +232,6 @@ a:hover {
   transform: translateY(-1px) scale(1.01);
 }
 
-/* ===========================
-   Buttons & Specials
-=========================== */
 .blue {
   color: #51b9ea;
   font-weight: 550;
@@ -271,8 +262,6 @@ a:hover {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Menü-Boxen Hover-Effekt */
-.box,
 .box2 {
   position: relative;
   background-color: #e30613;
@@ -302,9 +291,6 @@ a:hover {
   opacity: 1;
 }
 
-/* ===========================
-   Icons
-=========================== */
 .icon-container {
   display: flex;
   align-items: center;
@@ -328,6 +314,14 @@ a:hover {
   stroke: currentColor;
 }
 
+.picture {
+  width: 100%;
+  height: 286px;
+}
+
+.picture .title-picture {
+  width: 1840px;
+}
 
 @media (max-width: 1200px) {
   header .container-row .box {
@@ -342,11 +336,11 @@ a:hover {
 
   .picture {
     width: 100%;
-    height: 256px;
+    height: 272px;
   }
 
   .picture .title-picture {
-    width: 1670px;
+    width: 1740px;
   }
 
   .main-content {
@@ -371,14 +365,15 @@ a:hover {
     height: 102px;
   }
 
-  .picture {
+   .picture {
     width: 100%;
-    height: 256px;
+    height: 258px;
   }
 
   .picture .title-picture {
-    width: 1570px;
+    width: 1640px;
   }
+
 }
 
 @media (max-width: 1060px) {
@@ -394,11 +389,11 @@ a:hover {
 
   .picture {
     width: 100%;
-    height: 236px;
+    height: 240px;
   }
 
   .picture .title-picture {
-    width: 1470px;
+    width: 1500px;
   }
 
   h1,
@@ -424,7 +419,7 @@ a:hover {
   }
 
   .picture .title-picture {
-    width: 1370px;
+    width: 1400px;
   }
 
   h1,
@@ -480,7 +475,7 @@ a:hover {
   }
 
   .picture .title-picture {
-    width: 1170px;
+    width: 1200px;
   }
 
   h1,
@@ -582,7 +577,7 @@ a:hover {
     padding-bottom: 30px;
   }
 
-   .picture {
+  .picture {
     width: 100%;
     height: 170px;
   }
@@ -631,6 +626,15 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-top: 2px;
+  }
+
+   .picture {
+    width: 100%;
+    height: 135px;
+  }
+
+  .picture .title-picture {
+    width: 1050px;
   }
 }
 
