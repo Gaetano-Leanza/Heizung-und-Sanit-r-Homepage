@@ -199,6 +199,11 @@ footer .social-icons img:hover {
   transform: scale(1.2);
 }
 
+.icon-facebook {
+  width: 30px !important;
+  height: 30px !important;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");

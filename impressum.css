@@ -333,6 +333,12 @@ a:hover {
   padding-left: 40px;
 }
 
+.icon-facebook {
+  width: 30px !important;  
+  height: 30px !important; 
+}
+
+
 @media (max-width: 1200px) {
   header .container-row .box {
     width: 180px;
