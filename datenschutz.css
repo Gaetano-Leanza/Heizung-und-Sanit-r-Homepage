@@ -342,10 +342,10 @@ a:hover {
   }
 
   .main-content p,
+  .main-content a,
   h3,
-  h4,
-  a,
-  .icon-container {
+  h4
+   {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -596,7 +596,7 @@ a:hover {
 
   h3,
   h4,
-  p {
+  p, .main-content a {
     text-align: center;
   }
 

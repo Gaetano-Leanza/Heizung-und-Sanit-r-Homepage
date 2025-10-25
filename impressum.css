@@ -334,10 +334,15 @@ a:hover {
 }
 
 .icon-facebook {
-  width: 30px !important;  
-  height: 30px !important; 
+  width: 30px !important;
+  height: 30px !important;
 }
 
+@media (max-width: 1250px) {
+  .main-content {
+    width: 100%;
+  }
+}
 
 @media (max-width: 1200px) {
   header .container-row .box {
@@ -592,7 +597,7 @@ a:hover {
     padding-bottom: 30px;
   }
 
-   .picture {
+  .picture {
     width: 100%;
     height: 170px;
   }
