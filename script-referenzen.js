@@ -21,40 +21,29 @@
     return parseFloat(gapStr) || 0;
   }
 
-  // scroll handler, springt immer genau 3 Karten (mit Wrap-around)
   function makeScrollHandler(track, direction){
     return () => {
-      const items = Array.from(track.querySelectorAll('.card, .card1, .card2'));
-      if(items.length === 0) return;
+      const card = track.querySelector('.card, .card1, .card2');
+      if(!card) return;
 
-      const item = items[0];
-      const itemWidth = item.offsetWidth;
-      const gap = getGap(track);
-      const step = itemWidth + gap;
-
-      const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+      const cardWidth = card.offsetWidth + parseInt(getComputedStyle(card).marginRight, 10);
+      const amount = cardWidth * 1;
+      const maxScroll = track.scrollWidth - track.clientWidth;
       const currentScroll = track.scrollLeft;
 
-      let currentIndex = Math.round(currentScroll / step);
-
       if(direction === 'next') {
-        const desiredIndex = currentIndex + 3;
-
-        if(desiredIndex * step > maxScroll + 1) {
+        // Prüfe ob wir nah am Ende sind BEVOR wir scrollen
+        if(currentScroll + amount >= maxScroll - 5) {
           track.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
-          const newScroll = desiredIndex * step;
-          track.scrollTo({ left: Math.max(0, Math.min(newScroll, maxScroll)), behavior: 'smooth' });
+          track.scrollBy({ left: amount, behavior: 'smooth' });
         }
       } else {
-        const desiredIndex = currentIndex - 3;
-
-        if(desiredIndex < 0) {
-          const lastIndex = Math.floor(maxScroll / step);
-          track.scrollTo({ left: lastIndex * step, behavior: 'smooth' });
+        // Prüfe ob wir nah am Anfang sind BEVOR wir scrollen
+        if(currentScroll - amount <= 5) {
+          track.scrollTo({ left: maxScroll, behavior: 'smooth' });
         } else {
-          const newScroll = desiredIndex * step;
-          track.scrollTo({ left: Math.max(0, Math.min(newScroll, maxScroll)), behavior: 'smooth' });
+          track.scrollBy({ left: -amount, behavior: 'smooth' });
         }
       }
     };
