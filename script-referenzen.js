@@ -27,7 +27,7 @@
       if(!card) return;
 
       const cardWidth = card.offsetWidth + parseInt(getComputedStyle(card).marginRight, 10);
-      const amount = cardWidth * 1;
+      const amount = cardWidth * 1.105;
       const maxScroll = track.scrollWidth - track.clientWidth;
       const currentScroll = track.scrollLeft;
 

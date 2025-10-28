@@ -213,11 +213,12 @@ header .container-row .box2 {
 
 .track {
   display: flex;
-  gap: 33.5px;
+  gap: 43px;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
   max-height: 500px;
+  background-color: #e30613;
 }
 
 .track::-webkit-scrollbar {
@@ -1081,19 +1082,40 @@ a:hover {
 @media (max-width: 596px) {
   .row,
   .row-bottom {
-    width: 300px;
+    width: 340px;
+  }
+
+  .card img,
+  .card1 img,
+  .card2 img {
+    height: 630px;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .track {
+    gap: 36px;
   }
 
   .card {
-    width: 260px;
+    width: 340px;
+    height: 340px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .card1 {
-    width: 260px;
+    width: 340px;
+    height: 340px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .card2 {
-    width: 260px;
+    width: 340px;
+    height: 340px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
