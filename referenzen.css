@@ -218,7 +218,6 @@ header .container-row .box2 {
   overflow-y: hidden;
   scroll-behavior: smooth;
   max-height: 500px;
-  background-color: #e30613;
 }
 
 .track::-webkit-scrollbar {
@@ -229,7 +228,6 @@ header .container-row .box2 {
 .card1,
 .card2 {
   flex: 0 0 auto;
-  border-radius: 10px;
   background-color: #f3f3f3;
   padding: 0 20px;
   cursor: pointer;
@@ -248,7 +246,6 @@ header .container-row .box2 {
   width: 371px;
   height: 371px;
   overflow: hidden;
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1164,6 +1161,14 @@ a:hover {
     justify-content: center;
     margin-top: 2px;
   }
+
+  .card img,
+  .card1 img,
+  .card2 img {
+    height: 530px;
+    width: auto;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 462px) {
@@ -1324,27 +1329,220 @@ a:hover {
   .track {
     gap: 27px;
   }
+
+  .card img,
+  .card1 img,
+  .card2 img {
+    height: 430px;
+    width: auto;
+    object-fit: cover;
+  }
 }
 
 @media (max-width: 400px) {
   .row,
   .row-bottom {
-    width: 190px;
-    height: 350px;
+    width: 250px;
   }
 
   .card {
-    width: 150px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
   }
 
   .card1 {
-    width: 150px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
   }
 
   .card2 {
-    width: 150px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .track {
+    gap: 26px;
+  }
+}
+
+@media (max-width: 390px) {
+  .row,
+  .row-bottom {
+    width: 240px;
+  }
+
+  .card {
+    width: 240px;
+    height: 240px;
+  }
+
+  .card1 {
+    width: 240px;
+    height: 240px;
+  }
+
+  .card2 {
+    width: 240px;
+    height: 240px;
+  }
+
+  .track {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 380px) {
+  .row,
+  .row-bottom {
+    width: 230px;
+  }
+
+  .card {
+    width: 230px;
+    height: 230px;
+  }
+
+  .card1 {
+    width: 230px;
+    height: 230px;
+  }
+
+  .card2 {
+    width: 230px;
+    height: 230px;
+  }
+
+  .track {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 370px) {
+  .row,
+  .row-bottom {
+    width: 220px;
+  }
+
+  .card {
+    width: 220px;
+    height: 220px;
+  }
+
+  .card1 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .card2 {
+    width: 220px;
+    height: 220px;
+  }
+
+  .track {
+    gap: 23px;
+  }
+}
+
+@media (max-width: 360px) {
+  .row,
+  .row-bottom {
+    width: 210px;
+  }
+
+  .card {
+    width: 210px;
+    height: 210px;
+  }
+
+  .card1 {
+    width: 210px;
+    height: 210px;
+  }
+
+  .card2 {
+    width: 210px;
+    height: 210px;
+  }
+
+  .track {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 350px) {
+  .row,
+  .row-bottom {
+    width: 200px;
+  }
+
+  .card {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .track {
+    gap: 21px;
+  }
+}
+
+@media (max-width: 340px) {
+  .row,
+  .row-bottom {
+    width: 190px;
+  }
+
+  .card {
+    width: 190px;
+    height: 190px;
+  }
+
+  .card1 {
+    width: 190px;
+    height: 190px;
+  }
+
+  .card2 {
+    width: 190px;
+    height: 190px;
+  }
+
+  .track {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 330px) {
+  .row,
+  .row-bottom {
+    width: 180px;
+  }
+
+  .card {
+    width: 180px;
+    height: 180px;
+  }
+
+  .card1 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .card2 {
+    width: 180px;
+    height: 180px;
+  }
+
+  .track {
+    gap: 19px;
   }
 }
