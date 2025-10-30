@@ -120,17 +120,6 @@ li {
   font-size: 19px;
 }
 
-a {
-  color: #51b9ea;
-  text-decoration: none;
-  padding-bottom: 10px;
-  font-weight: 540;
-}
-
-a:hover {
-  color: #3498db;
-}
-
 .blue {
   color: #51b9ea;
   font-weight: 550;
@@ -159,29 +148,6 @@ a:hover {
 .contact-button:hover {
   transform: translateY(-1px) scale(1.01);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.icon-container {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.icon-container svg {
-  width: 20px;
-  height: 20px;
-  color: #39a5d5;
-  margin-bottom: 12px;
-}
-
-.icon-container svg[fill="currentColor"] path {
-  fill: currentColor;
-}
-
-.icon-container svg[stroke="currentColor"] path,
-.icon-container svg[stroke="currentColor"] circle {
-  stroke: currentColor;
 }
 
 .rows {

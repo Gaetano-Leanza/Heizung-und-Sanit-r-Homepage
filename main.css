@@ -171,6 +171,17 @@ footer .social-icons img:hover {
   height: 30px !important;
 }
 
+a {
+  color: #51b9ea;
+  text-decoration: none;
+  padding-bottom: 10px;
+  font-weight: 540;
+}
+
+a:hover {
+  color: #3498db;
+}
+
 .left-foot a {
   color: white;
   text-decoration: none;
@@ -183,6 +194,33 @@ footer .social-icons img:hover {
 
 .left-foot a:hover {
   transform: translateY(-1px) scale(1.01);
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+}
+
+.icon-container svg {
+  width: 20px;
+  height: 20px;
+  color: #39a5d5;
+  margin-bottom: 12px;
+}
+
+.icon-container svg[fill="currentColor"] path {
+  fill: currentColor;
+}
+
+.icon-container svg[stroke="currentColor"] path,
+.icon-container svg[stroke="currentColor"] circle {
+  stroke: currentColor;
+}
+
+.icon-container-text {
+  text-align: start;
 }
 
 @media (max-width: 1200px) {
