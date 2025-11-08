@@ -133,42 +133,23 @@ li {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.partner {
-  width: 100%;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.partner-row1 {
-  height: 200px;
-  gap: 10px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.partner-row2 {
-  height: 200px;
-  gap: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.partner-row3 {
-  height: 200px;
-  gap: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .logo-partner {
+  width: 220px;
+  height: auto;
+}
+
+.logo-partner-daikin {
+  width: 270px;
+  height: auto;
+}
+
+.logo-partner-wolf {
   width: 200px;
+  height: auto;
+}
+
+.logo-partner-buderus {
+  width: 260px;
   height: auto;
 }
 
@@ -178,7 +159,8 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: aquamarine;
+  background-color: white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 12px;
   cursor: pointer;
@@ -187,6 +169,70 @@ li {
 .partner-card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.partner-card-wolf {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #11151c;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.partner-card-wolf:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.partner-card-buderus {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #12345e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.partner-card-buderus:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.partner {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+@media (max-width: 1044px) {
+  .partner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 755px) {
+  .partner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.partner-card {
+  text-align: center;
+  max-width: 300px;
 }
 
 @media (max-width: 1200px) {
