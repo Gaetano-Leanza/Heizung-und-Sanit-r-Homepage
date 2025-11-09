@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.hegau-haustechnik.de/</loc>
+    <lastmod>2025-11-01</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.hegau-haustechnik.de/leistungen.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.hegau-haustechnik.de/referenzen.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.hegau-haustechnik.de/kontakt.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.hegau-haustechnik.de/impressum.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.hegau-haustechnik.de/datenschutz.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>
