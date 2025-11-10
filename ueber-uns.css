@@ -827,17 +827,7 @@ li {
   }
 }
 
-@media (max-width: 387px) {
-  .main-content {
-    height: 1530px;
-  }
-}
 
-@media (max-width: 379px) {
-  .main-content {
-    height: 1570px;
-  }
-}
 
 @media (max-width: 366px) {
   .main-content {
