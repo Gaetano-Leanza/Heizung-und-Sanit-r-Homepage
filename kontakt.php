@@ -1,61 +1,52 @@
 <?php
-// === 1. Sicherheit: nur POST-Anfragen akzeptieren ===
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    http_response_code(405);
-    exit("Ungültige Anfrage.");
-}
+// Fehlerbehandlung aktivieren
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
 
-// === 2. Eingabedaten abholen und bereinigen ===
-$vorname   = trim($_POST["vorname"] ?? "");
-$nachname  = trim($_POST["nachname"] ?? "");
-$telefon   = trim($_POST["telefon"] ?? "");
-$email     = trim($_POST["email"] ?? "");
-$mitteilung = trim($_POST["mitteilung"] ?? "");
-$captchaResponse = $_POST["g-recaptcha-response"] ?? "";
-
-// === 3. Validierung ===
-$errors = [];
-
-if (strlen($vorname) < 3)        $errors[] = "Vorname ist zu kurz.";
-if (strlen($nachname) < 3)       $errors[] = "Nachname ist zu kurz.";
-if (!preg_match("/^[\d\s+\-]{6,}$/", $telefon)) $errors[] = "Telefonnummer ist ungültig.";
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = "E-Mail ist ungültig.";
-if (strlen($mitteilung) < 5)     $errors[] = "Mitteilung ist zu kurz.";
-
-// === 4. reCAPTCHA prüfen ===
-// ⚠️ Ersetze den Platzhalter durch deinen echten Secret Key
-$secretKey = "DEIN-SECRET-KEY";
-
-if (empty($captchaResponse)) {
-    $errors[] = "Bitte bestätige, dass du kein Roboter bist.";
-} else {
-    $verify = file_get_contents(
-        "https://www.google.com/recaptcha/api/siteverify?secret=" .
-        urlencode($secretKey) . "&response=" . urlencode($captchaResponse)
-    );
-    $captchaData = json_decode($verify);
-    if (empty($captchaData->success)) {
-        $errors[] = "Die reCAPTCHA-Überprüfung ist fehlgeschlagen.";
+// Prüfen ob das Formular per POST gesendet wurde
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    // Formulardaten abrufen und bereinigen
+    $vorname = htmlspecialchars(trim($_POST['vorname'] ?? ''));
+    $nachname = htmlspecialchars(trim($_POST['nachname'] ?? ''));
+    $telefon = htmlspecialchars(trim($_POST['telefon'] ?? ''));
+    $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
+    $mitteilung = htmlspecialchars(trim($_POST['mitteilung'] ?? ''));
+    
+    // Validierung
+    $errors = [];
+    
+    if (empty($vorname) || !preg_match('/^[A-Za-zÄÖÜäöüß]{3,}$/', $vorname)) {
+        $errors[] = "Ungültiger Vorname";
     }
-}
-
-// === 5. Fehler prüfen ===
-if (!empty($errors)) {
-    http_response_code(400);
-    echo "<h3>Fehler:</h3><ul>";
-    foreach ($errors as $err) {
-        echo "<li>" . htmlspecialchars($err) . "</li>";
+    
+    if (empty($nachname) || !preg_match('/^[A-Za-zÄÖÜäöüß]{3,}$/', $nachname)) {
+        $errors[] = "Ungültiger Nachname";
     }
-    echo "</ul><p><a href='javascript:history.back()'>Zurück</a></p>";
-    exit;
-}
+    
+    if (empty($telefon) || !preg_match('/^[\d\s+\-]{6,}$/', $telefon)) {
+        $errors[] = "Ungültige Telefonnummer";
+    }
+    
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "Ungültige E-Mail-Adresse";
+    }
+    
+    if (empty($mitteilung)) {
+        $errors[] = "Mitteilung fehlt";
+    }
+    
+    // Wenn keine Fehler, E-Mail versenden
+    if (empty($errors)) {
+        // WICHTIG: Verwende eine E-Mail-Adresse deiner Domain!
+        // z.B. kontakt@deine-domain.de oder info@deine-domain.de
+        $absender = "kontakt@leanza-hijab.store";
+        $empfaenger = "info@hegau-haustechnik.de";
+        
+        $betreff = "Neue Kontaktanfrage von $vorname $nachname";
+        
+        $nachricht = "Neue Kontaktanfrage:
 
-// === 6. Wenn alles ok ist: Mail versenden oder speichern ===
-// Hier kannst du die Daten weiterverarbeiten – z. B. per E-Mail senden
-
-$empfaenger = "deine@mailadresse.de"; // <– hier deine E-Mail-Adresse eintragen
-$betreff = "Neue Kontaktanfrage von $vorname $nachname";
-$nachricht = "
 Vorname: $vorname
 Nachname: $nachname
 Telefon: $telefon
@@ -64,14 +55,35 @@ E-Mail: $email
 Mitteilung:
 $mitteilung
 ";
-
-$headers = "From: $email\r\nReply-To: $email\r\n";
-
-if (mail($empfaenger, $betreff, $nachricht, $headers)) {
-    echo "<h2>Vielen Dank, $vorname!</h2>";
-    echo "<p>Deine Nachricht wurde erfolgreich gesendet.</p>";
+        
+        // Header für United Domains optimiert
+        $headers = "From: $absender\r\n";
+        $headers .= "Reply-To: $email\r\n";
+        $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+        
+        // E-Mail senden
+        if (mail($empfaenger, $betreff, $nachricht, $headers)) {
+            // Erfolg - Weiterleitung zur Danke-Seite
+            header("Location: danke.html");
+            exit();
+        } else {
+            echo "Fehler beim Versenden der E-Mail. Bitte versuche es später erneut.";
+        }
+    } else {
+        // Fehler anzeigen
+        echo "<h3>Folgende Fehler sind aufgetreten:</h3>";
+        echo "<ul>";
+        foreach ($errors as $error) {
+            echo "<li>$error</li>";
+        }
+        echo "</ul>";
+        echo '<a href="javascript:history.back()">Zurück zum Formular</a>';
+    }
+    
 } else {
-    http_response_code(500);
-    echo "<p>Fehler beim Senden der Nachricht. Bitte versuche es später erneut.</p>";
+    // Wenn nicht per POST aufgerufen, zurück zur Startseite
+    header("Location: index.html");
+    exit();
 }
 ?>
