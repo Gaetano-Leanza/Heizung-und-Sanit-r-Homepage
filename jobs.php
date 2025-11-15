@@ -5,66 +5,120 @@ ini_set('display_errors', 0);
 
 // Prüfen ob das Formular per POST gesendet wurde
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+
     // Formulardaten abrufen und bereinigen
     $vorname = htmlspecialchars(trim($_POST['vorname'] ?? ''));
     $nachname = htmlspecialchars(trim($_POST['nachname'] ?? ''));
     $telefon = htmlspecialchars(trim($_POST['telefon'] ?? ''));
     $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
-    $mitteilung = htmlspecialchars(trim($_POST['mitteilung'] ?? ''));
-    
+
     // Validierung
     $errors = [];
-    
+
     if (empty($vorname) || !preg_match('/^[A-Za-zÄÖÜäöüß]{3,}$/', $vorname)) {
         $errors[] = "Ungültiger Vorname";
     }
-    
+
     if (empty($nachname) || !preg_match('/^[A-Za-zÄÖÜäöüß]{3,}$/', $nachname)) {
         $errors[] = "Ungültiger Nachname";
     }
-    
+
     if (empty($telefon) || !preg_match('/^[\d\s+\-]{6,}$/', $telefon)) {
         $errors[] = "Ungültige Telefonnummer";
     }
-    
+
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Ungültige E-Mail-Adresse";
     }
-    
-    if (empty($mitteilung)) {
-        $errors[] = "Mitteilung fehlt";
+
+    // Datei-Upload verarbeiten
+    $dateien = [];
+    $erlaubte_typen = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+    $max_dateigroesse = 5 * 1024 * 1024; // 5 MB
+
+    if (isset($_FILES['dateien']) && !empty($_FILES['dateien']['name'][0])) {
+        foreach ($_FILES['dateien']['tmp_name'] as $key => $tmp_name) {
+            if ($_FILES['dateien']['error'][$key] === UPLOAD_ERR_OK) {
+                $datei_name = $_FILES['dateien']['name'][$key];
+                $datei_typ = $_FILES['dateien']['type'][$key];
+                $datei_groesse = $_FILES['dateien']['size'][$key];
+                
+                // Validierung der Datei
+                if (!in_array($datei_typ, $erlaubte_typen)) {
+                    $errors[] = "Ungültiger Dateityp: $datei_name";
+                    continue;
+                }
+                
+                if ($datei_groesse > $max_dateigroesse) {
+                    $errors[] = "Datei zu groß: $datei_name (max. 5 MB)";
+                    continue;
+                }
+                
+                // Datei einlesen
+                $datei_inhalt = file_get_contents($tmp_name);
+                $dateien[] = [
+                    'name' => $datei_name,
+                    'type' => $datei_typ,
+                    'content' => $datei_inhalt
+                ];
+            }
+        }
     }
-    
+
+    // Wenn keine Fehler, E-Mail versenden
     if (empty($errors)) {
         $absender = "kontakt@hegau-haustechnik.de";
         $empfaenger = "info@hegau-haustechnik.de";
-        
-        $betreff = "Neue Kontaktanfrage von $vorname $nachname";
-        
-        $nachricht = "Neue Kontaktanfrage:
+        $betreff = "Neue Bewerbung von $vorname $nachname";
 
-Vorname: $vorname
-Nachname: $nachname
-Telefon: $telefon
-E-Mail: $email
+        // Boundary für Multipart-E-Mail
+        $boundary = md5(time());
 
-Mitteilung:
-$mitteilung
-";
-        
+        // Header für E-Mail mit Anhängen
         $headers = "From: $absender\r\n";
         $headers .= "Reply-To: $email\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
         $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+
+        // E-Mail-Body beginnen
+        $nachricht = "--$boundary\r\n";
+        $nachricht .= "Content-Type: text/plain; charset=UTF-8\r\n";
+        $nachricht .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
         
+        $nachricht .= "Neue Bewerbung:\n\n";
+        $nachricht .= "Vorname: $vorname\n";
+        $nachricht .= "Nachname: $nachname\n";
+        $nachricht .= "Telefon: $telefon\n";
+        $nachricht .= "E-Mail: $email\n\n";
+        
+        if (count($dateien) > 0) {
+            $nachricht .= "Anzahl hochgeladener Dateien: " . count($dateien) . "\n\n";
+        }
+
+        // Anhänge hinzufügen
+        foreach ($dateien as $datei) {
+            $datei_inhalt_encoded = chunk_split(base64_encode($datei['content']));
+            
+            $nachricht .= "--$boundary\r\n";
+            $nachricht .= "Content-Type: {$datei['type']}; name=\"{$datei['name']}\"\r\n";
+            $nachricht .= "Content-Transfer-Encoding: base64\r\n";
+            $nachricht .= "Content-Disposition: attachment; filename=\"{$datei['name']}\"\r\n\r\n";
+            $nachricht .= $datei_inhalt_encoded . "\r\n";
+        }
+
+        // Boundary abschließen
+        $nachricht .= "--$boundary--";
+
+        // E-Mail senden
         if (mail($empfaenger, $betreff, $nachricht, $headers)) {
+            // Erfolg - Modal anzeigen
             echo '<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nachricht gesendet</title>
+    <title>Bewerbung gesendet</title>
     <style>
         * {
             margin: 0;
@@ -153,7 +207,6 @@ $mitteilung
         
         .modal button:hover {
             background-color: #39a5d5;
-        }
     </style>
 </head>
 <body>
@@ -161,7 +214,7 @@ $mitteilung
         <div class="modal">
             <div class="success-icon"></div>
             <h2>Erfolgreich versendet!</h2>
-            <p>Vielen Dank für Ihre Nachricht. Wir werden uns schnellstmöglich bei Ihnen melden.</p>
+            <p>Vielen Dank für Ihre Bewerbung. Wir werden uns schnellstmöglich bei Ihnen melden.</p>
             <button onclick="window.history.back()">Zurück</button>
         </div>
     </div>
@@ -238,7 +291,7 @@ $mitteilung
             line-height: 1.5;
         }
         
-          .modal button {
+        .modal button {
             background-color: #51b9ea;
             color: white;
             border: none;
@@ -377,7 +430,7 @@ $mitteilung
 </html>';
         exit();
     }
-    
+
 } else {
     // Wenn nicht per POST aufgerufen, zurück zur Startseite
     header("Location: index.html");
