@@ -113,7 +113,7 @@ $mitteilung
         .success-icon {
             width: 60px;
             height: 60px;
-            background-color: #4CAF50;
+            background-color: #51b9ea;
             border-radius: 50%;
             display: flex;
             justify-content: center;

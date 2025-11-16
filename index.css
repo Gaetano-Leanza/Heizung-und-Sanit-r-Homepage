@@ -442,7 +442,9 @@ li {
   }
 
   .left-side {
-    width: 700px;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .right-side {
@@ -464,18 +466,7 @@ li {
   }
 }
 
-@media (max-width: 730px) {
-  .left-side {
-    width: 650px;
-    padding-right: 20px;
-  }
-}
-
 @media (max-width: 690px) {
-  .left-side {
-    width: 600px;
-  }
-
   .calendly-inline-widget {
     width: 80%;
   }
@@ -485,23 +476,9 @@ li {
   .main-content {
     height: 880px;
   }
-
-  .left-side {
-    width: 550px;
-  }
-}
-
-@media (max-width: 580px) {
-  .left-side {
-    width: 500px;
-  }
 }
 
 @media (max-width: 530px) {
-  .left-side {
-    width: 450px;
-  }
-
   .calendly-inline-widget {
     width: 90%;
   }
@@ -511,19 +488,11 @@ li {
   .main-content {
     height: 925px;
   }
-
-  .left-side {
-    width: 400px;
-  }
 }
 
 @media (max-width: 440px) {
   .main-content {
     height: 1000px;
-  }
-
-  .left-side {
-    width: 350px;
   }
 
   h1,
@@ -542,12 +511,6 @@ li {
   .main-content {
     height: 1050px;
   }
-
-  .left-side {
-    width: 320px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
 }
 
 @media (max-width: 380px) {
@@ -555,15 +518,8 @@ li {
     height: 1050px;
   }
 
-  .left-side {
-    width: 320px;
-    padding-left: 3px;
-    padding-right: 3px;
-  }
-
   .partner {
     padding-right: 20px;
     padding-left: 20px;
   }
 }
-
