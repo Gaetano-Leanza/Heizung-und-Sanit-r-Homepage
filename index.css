@@ -148,6 +148,11 @@ li {
   height: auto;
 }
 
+.logo-partner-panasonic {
+  width: 200px;
+  height: auto;
+}
+
 .logo-partner-buderus {
   width: 260px;
   height: auto;
@@ -474,7 +479,19 @@ li {
 
 @media (max-width: 630px) {
   .main-content {
-    height: 880px;
+    height: 800px;
+  }
+}
+
+@media (max-width: 580px) {
+  .main-content {
+    height: 820px;
+  }
+}
+
+@media (max-width: 504px) {
+  .main-content {
+    height: 840px;
   }
 }
 
@@ -484,17 +501,25 @@ li {
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 466px) {
   .main-content {
-    height: 925px;
+    height: 860px;
+  }
+}
+
+@media (max-width: 457px) {
+  .main-content {
+    height: 890px;
+  }
+}
+
+@media (max-width: 442px) {
+  .main-content {
+    height: 910px;
   }
 }
 
 @media (max-width: 440px) {
-  .main-content {
-    height: 1000px;
-  }
-
   h1,
   h2 {
     font-size: 26px;
@@ -507,19 +532,39 @@ li {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
   .main-content {
-    height: 1050px;
+    height: 930px;
+  }
+}
+
+@media (max-width: 413px) {
+  .main-content {
+    height: 950px;
+  }
+}
+
+@media (max-width: 389px) {
+  .main-content {
+    height: 970px;
+  }
+}
+
+@media (max-width: 353px) {
+  .main-content {
+    height: 990px;
   }
 }
 
 @media (max-width: 380px) {
-  .main-content {
-    height: 1050px;
-  }
-
   .partner {
     padding-right: 20px;
     padding-left: 20px;
+  }
+}
+
+@media (max-width: 331px) {
+  .main-content {
+    height: 1010px;
   }
 }
