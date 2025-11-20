@@ -1,3 +1,68 @@
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: none;
+  font-family: sans-serif;
+  z-index: 99999;
+}
+
+.cookie-banner button {
+  margin-right: 10px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.text-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cookie-banner.cookie-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#cookie-accept {
+  background-color: #51b9ea;
+  color: white;
+  align-items: center;
+}
+
+#cookie-accept:hover {
+  background-color: #39a5d5;
+  transform: scale(1.05);
+}
+
+#cookie-decline {
+  background-color: #51b9ea;
+  color: white;
+}
+
+#cookie-decline:hover {
+  background-color: #39a5d5;
+  transform: scale(1.05);
+}
+
+#cookie-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  gap: 10px; 
+}
+
+#cookie-banner button {
+  margin: 5px;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("assets/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
