@@ -29,12 +29,6 @@
   justify-content: center;
 }
 
-#cookie-banner.cookie-banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 #cookie-accept {
   background-color: #51b9ea;
   color: white;

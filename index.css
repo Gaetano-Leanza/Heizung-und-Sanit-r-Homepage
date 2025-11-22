@@ -138,6 +138,11 @@ li {
   height: auto;
 }
 
+.logo-partner-konstanz {
+  width: 280px;
+  height: auto;
+}
+
 .logo-partner-dimplex {
   width: 265px;
   height: auto;
@@ -177,6 +182,24 @@ li {
 }
 
 .partner-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.partner-card-konstanz {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.partner-card-konstanz:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
