@@ -379,17 +379,28 @@ li {
   }
 
   .main-content-left {
-    width: 95%;
-    padding-left: 40px;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   .main-content-right {
-    width: 95%;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 
   .main-content2-right,
   .main-content2-left {
-    padding-right: 20px !important;
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    hyphens: auto;
+    overflow-wrap: break-word;
   }
 }
 
@@ -459,16 +470,13 @@ li {
     height: 850px;
   }
 
-  h3, h4 {
+  h3,
+  h4 {
     text-align: center;
   }
 }
 
 @media (max-width: 390px) {
-  .main-content {
-    height: 950px;
-  }
-
   h5 {
     font-size: 28px;
     text-align: center;

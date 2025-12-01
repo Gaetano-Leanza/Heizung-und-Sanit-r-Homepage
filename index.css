@@ -178,6 +178,11 @@ li {
   height: auto;
 }
 
+.logo-partner-pum {
+  width: 240px;
+  height: auto;
+  padding-right: 10px;
+}
 
 .partner-card {
   height: 200px;
@@ -193,6 +198,24 @@ li {
 }
 
 .partner-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.partner-card-pum {
+  height: 200px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #004090;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.partner-card-pum:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
