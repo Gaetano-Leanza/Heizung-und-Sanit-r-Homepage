@@ -5,43 +5,57 @@ ini_set('display_errors', 0);
 
 // Prüfen ob das Formular per POST gesendet wurde
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+
     // Formulardaten abrufen und bereinigen
     $vorname = htmlspecialchars(trim($_POST['vorname'] ?? ''));
     $nachname = htmlspecialchars(trim($_POST['nachname'] ?? ''));
     $telefon = htmlspecialchars(trim($_POST['telefon'] ?? ''));
     $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
     $mitteilung = htmlspecialchars(trim($_POST['mitteilung'] ?? ''));
-    
+
+    // --- reCAPTCHA ---
+    $captcha = $_POST['g-recaptcha-response'] ?? '';
+    $secretKey = "6LdLPSIsAAAAACQ-NVEIgm60FOZXA525T30AUaaj";  // <<< HIER EINTRAGEN
+
+    $verifyUrl = "https://www.google.com/recaptcha/api/siteverify";
+    $response = file_get_contents($verifyUrl . "?secret=" . $secretKey . "&response=" . $captcha);
+    $responseKeys = json_decode($response, true);
+
     // Validierung
     $errors = [];
-    
+
     if (empty($vorname) || !preg_match('/^[A-Za-zÄÖÜäöüß]{3,}$/', $vorname)) {
         $errors[] = "Ungültiger Vorname";
     }
-    
+
     if (empty($nachname) || !preg_match('/^[A-Za-zÄÖÜäöüß]{3,}$/', $nachname)) {
         $errors[] = "Ungültiger Nachname";
     }
-    
+
     if (empty($telefon) || !preg_match('/^[\d\s+\-]{6,}$/', $telefon)) {
         $errors[] = "Ungültige Telefonnummer";
     }
-    
+
     if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $errors[] = "Ungültige E-Mail-Adresse";
     }
-    
+
     if (empty($mitteilung)) {
         $errors[] = "Mitteilung fehlt";
     }
-    
+
+    // === reCAPTCHA Fehler hinzufügen ===
+    if (!$responseKeys["success"]) {
+        $errors[] = "reCAPTCHA-Verifizierung fehlgeschlagen.";
+    }
+
+    // Wenn keine Fehler → Mail versenden
     if (empty($errors)) {
         $absender = "kontakt@hegau-haustechnik.de";
         $empfaenger = "info@hegau-haustechnik.de";
-        
+
         $betreff = "Neue Kontaktanfrage von $vorname $nachname";
-        
+
         $nachricht = "Neue Kontaktanfrage:
 
 Vorname: $vorname
@@ -52,12 +66,13 @@ E-Mail: $email
 Mitteilung:
 $mitteilung
 ";
-        
+
         $headers = "From: $absender\r\n";
         $headers .= "Reply-To: $email\r\n";
         $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
         $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-        
+
+        // Wenn erfolgreich
         if (mail($empfaenger, $betreff, $nachricht, $headers)) {
             echo '<!DOCTYPE html>
 <html lang="de">
@@ -377,7 +392,7 @@ $mitteilung
 </html>';
         exit();
     }
-    
+
 } else {
     // Wenn nicht per POST aufgerufen, zurück zur Startseite
     header("Location: index.html");
